@@ -1,0 +1,143 @@
+[2020-12-24 23:05:41,290] {taskinstance.py:669} INFO - Dependencies all met for <TaskInstance: data-cleaning-and-integration.extract_data 2020-12-24T21:05:25.907747+00:00 [queued]>
+[2020-12-24 23:05:41,297] {taskinstance.py:669} INFO - Dependencies all met for <TaskInstance: data-cleaning-and-integration.extract_data 2020-12-24T21:05:25.907747+00:00 [queued]>
+[2020-12-24 23:05:41,297] {taskinstance.py:879} INFO - 
+--------------------------------------------------------------------------------
+[2020-12-24 23:05:41,297] {taskinstance.py:880} INFO - Starting attempt 1 of 1
+[2020-12-24 23:05:41,297] {taskinstance.py:881} INFO - 
+--------------------------------------------------------------------------------
+[2020-12-24 23:05:41,302] {taskinstance.py:900} INFO - Executing <Task(PythonOperator): extract_data> on 2020-12-24T21:05:25.907747+00:00
+[2020-12-24 23:05:41,305] {standard_task_runner.py:53} INFO - Started process 6996 to run task
+[2020-12-24 23:05:41,353] {logging_mixin.py:112} INFO - Running %s on host %s <TaskInstance: data-cleaning-and-integration.extract_data 2020-12-24T21:05:25.907747+00:00 [running]> 1.0.0.127.in-addr.arpa
+[2020-12-24 23:05:41,408] {python_operator.py:114} INFO - Done. Returned value was: [         Country                           Region  Happiness Rank  Happiness Score  ...  Freedom  Trust (Government Corruption)  Generosity  Dystopia Residual
+0    Switzerland                   Western Europe               1            7.587  ...  0.66557                        0.41978     0.29678            2.51738
+1        Iceland                   Western Europe               2            7.561  ...  0.62877                        0.14145     0.43630            2.70201
+2        Denmark                   Western Europe               3            7.527  ...  0.64938                        0.48357     0.34139            2.49204
+3         Norway                   Western Europe               4            7.522  ...  0.66973                        0.36503     0.34699            2.46531
+4         Canada                    North America               5            7.427  ...  0.63297                        0.32957     0.45811            2.45176
+..           ...                              ...             ...              ...  ...      ...                            ...         ...                ...
+153       Rwanda               Sub-Saharan Africa             154            3.465  ...  0.59201                        0.55191     0.22628            0.67042
+154        Benin               Sub-Saharan Africa             155            3.340  ...  0.48450                        0.08010     0.18260            1.63328
+155        Syria  Middle East and Northern Africa             156            3.006  ...  0.15684                        0.18906     0.47179            0.32858
+156      Burundi               Sub-Saharan Africa             157            2.905  ...  0.11850                        0.10062     0.19727            1.83302
+157         Togo               Sub-Saharan Africa             158            2.839  ...  0.36453                        0.10731     0.16681            1.56726
+
+[158 rows x 12 columns],          Country                           Region  Happiness Rank  Happiness Score  ...  Freedom  Trust (Government Corruption)  Generosity  Dystopia Residual
+0        Denmark                   Western Europe               1            7.526  ...  0.57941                        0.44453     0.36171            2.73939
+1    Switzerland                   Western Europe               2            7.509  ...  0.58557                        0.41203     0.28083            2.69463
+2        Iceland                   Western Europe               3            7.501  ...  0.56624                        0.14975     0.47678            2.83137
+3         Norway                   Western Europe               4            7.498  ...  0.59609                        0.35776     0.37895            2.66465
+4        Finland                   Western Europe               5            7.413  ...  0.57104                        0.41004     0.25492            2.82596
+..           ...                              ...             ...              ...  ...      ...                            ...         ...                ...
+152        Benin               Sub-Saharan Africa             153            3.484  ...  0.39747                        0.06681     0.20180            2.10812
+153  Afghanistan                    Southern Asia             154            3.360  ...  0.16430                        0.07112     0.31268            2.14558
+154         Togo               Sub-Saharan Africa             155            3.303  ...  0.34678                        0.11587     0.17517            2.13540
+155        Syria  Middle East and Northern Africa             156            3.069  ...  0.06912                        0.17233     0.48397            0.81789
+156      Burundi               Sub-Saharan Africa             157            2.905  ...  0.04320                        0.09419     0.20290            2.10404
+
+[157 rows x 13 columns],                       Country  Happiness.Rank  Happiness.Score  Whisker.high  ...   Freedom  Generosity  Trust..Government.Corruption.  Dystopia.Residual
+0                      Norway               1            7.537      7.594445  ...  0.635423    0.362012                       0.315964           2.277027
+1                     Denmark               2            7.522      7.581728  ...  0.626007    0.355280                       0.400770           2.313707
+2                     Iceland               3            7.504      7.622030  ...  0.627163    0.475540                       0.153527           2.322715
+3                 Switzerland               4            7.494      7.561772  ...  0.620071    0.290549                       0.367007           2.276716
+4                     Finland               5            7.469      7.527542  ...  0.617951    0.245483                       0.382612           2.430182
+..                        ...             ...              ...           ...  ...       ...         ...                            ...                ...
+150                    Rwanda             151            3.471      3.543030  ...  0.581844    0.252756                       0.455220           0.540061
+151                     Syria             152            3.462      3.663669  ...  0.081539    0.493664                       0.151347           1.061574
+152                  Tanzania             153            3.349      3.461430  ...  0.390018    0.354256                       0.066035           0.621130
+153                   Burundi             154            2.905      3.074690  ...  0.059901    0.204435                       0.084148           1.683024
+154  Central African Republic             155            2.693      2.864884  ...  0.270842    0.280876                       0.056565           2.066005
+
+[155 rows x 12 columns],      Overall rank         Country or region  Score  GDP per capita  ...  Healthy life expectancy  Freedom to make life choices  Generosity  Perceptions of corruption
+0               1                   Finland  7.632           1.305  ...                    0.874                         0.681       0.202                      0.393
+1               2                    Norway  7.594           1.456  ...                    0.861                         0.686       0.286                      0.340
+2               3                   Denmark  7.555           1.351  ...                    0.868                         0.683       0.284                      0.408
+3               4                   Iceland  7.495           1.343  ...                    0.914                         0.677       0.353                      0.138
+4               5               Switzerland  7.487           1.420  ...                    0.927                         0.660       0.256                      0.357
+..            ...                       ...    ...             ...  ...                      ...                           ...         ...                        ...
+151           152                     Yemen  3.355           0.442  ...                    0.343                         0.244       0.083                      0.064
+152           153                  Tanzania  3.303           0.455  ...                    0.381                         0.481       0.270                      0.097
+153           154               South Sudan  3.254           0.337  ...                    0.177                         0.112       0.224                      0.106
+154           155  Central African Republic  3.083           0.024  ...                    0.010                         0.305       0.218                      0.038
+155           156                   Burundi  2.905           0.091  ...                    0.145                         0.065       0.149                      0.076
+
+[156 rows x 9 columns],      Overall rank         Country or region  Score  GDP per capita  ...  Healthy life expectancy  Freedom to make life choices  Generosity  Perceptions of corruption
+0               1                   Finland  7.769           1.340  ...                    0.986                         0.596       0.153                      0.393
+1               2                   Denmark  7.600           1.383  ...                    0.996                         0.592       0.252                      0.410
+2               3                    Norway  7.554           1.488  ...                    1.028                         0.603       0.271                      0.341
+3               4                   Iceland  7.494           1.380  ...                    1.026                         0.591       0.354                      0.118
+4               5               Netherlands  7.488           1.396  ...                    0.999                         0.557       0.322                      0.298
+..            ...                       ...    ...             ...  ...                      ...                           ...         ...                        ...
+151           152                    Rwanda  3.334           0.359  ...                    0.614                         0.555       0.217                      0.411
+152           153                  Tanzania  3.231           0.476  ...                    0.499                         0.417       0.276                      0.147
+153           154               Afghanistan  3.203           0.350  ...                    0.361                         0.000       0.158                      0.025
+154           155  Central African Republic  3.083           0.026  ...                    0.105                         0.225       0.235                      0.035
+155           156               South Sudan  2.853           0.306  ...                    0.295                         0.010       0.202                      0.091
+
+[156 rows x 9 columns],      Unnamed: 0               name   region  ...   Literacy Rate(%)       Inflation(%)                                   Unemployement(%)
+0             0        Afghanistan     Asia  ...  28.1% (2000 est.)  6.8% (2013 est.).                                   35% (2008 est.).
+1             1      Åland Islands   Europe  ...                NaN                NaN                                                NaN
+2             2            Albania   Europe  ...  98.7% (2011 est.)  1.7% (2013 est.).  16.9% official rate (2013 est.). Note: These a...
+3             3            Algeria   Africa  ...                79%              3.9%.                                             10.3%.
+4             4     American Samoa  Oceania  ...    97% (1980 est.)                NaN                                                NaN
+..          ...                ...      ...  ...                ...                ...                                                ...
+245         245  Wallis and Futuna  Oceania  ...                NaN                NaN                                                NaN
+246         246     Western Sahara   Africa  ...                NaN                NaN                                                NaN
+247         247              Yemen     Asia  ...  65.3% (2011 est.)             11.8%.                                   35% (2003 est.).
+248         248             Zambia   Africa  ...  61.4% (2007 est.)              7.1%.                                   15% (2008 est.).
+249         249           Zimbabwe   Africa  ...                NaN                NaN                                                NaN
+
+[250 rows x 11 columns],           Country  Year      Status  Life expectancy   ...   thinness  1-19 years   thinness 5-9 years  Income composition of resources  Schooling
+0     Afghanistan  2015  Developing              65.0  ...                   17.2                 17.3                            0.479       10.1
+1     Afghanistan  2014  Developing              59.9  ...                   17.5                 17.5                            0.476       10.0
+2     Afghanistan  2013  Developing              59.9  ...                   17.7                 17.7                            0.470        9.9
+3     Afghanistan  2012  Developing              59.5  ...                   17.9                 18.0                            0.463        9.8
+4     Afghanistan  2011  Developing              59.2  ...                   18.2                 18.2                            0.454        9.5
+...           ...   ...         ...               ...  ...                    ...                  ...                              ...        ...
+2933     Zimbabwe  2004  Developing              44.3  ...                    9.4                  9.4                            0.407        9.2
+2934     Zimbabwe  2003  Developing              44.5  ...                    9.8                  9.9                            0.418        9.5
+2935     Zimbabwe  2002  Developing              44.8  ...                    1.2                  1.3                            0.427       10.0
+2936     Zimbabwe  2001  Developing              45.3  ...                    1.6                  1.7                            0.427        9.8
+2937     Zimbabwe  2000  Developing              46.0  ...                   11.0                 11.2                            0.434        9.8
+
+[2938 rows x 22 columns],                            Id  Human Development Index HDI-2014  ...  Tuberculosis rate per thousands 2012  Under-five Mortality 2013 thousands
+0                      Norway                          0.943877  ...                                  0.14                                  2.8
+1                   Australia                          0.934958  ...                                  0.19                                  4.0
+2                 Switzerland                          0.929613  ...                                  0.22                                  4.2
+3                     Denmark                          0.923328  ...                                  0.40                                  3.5
+4                 Netherlands                          0.921794  ...                                  0.17                                  4.0
+..                        ...                               ...  ...                                   ...                                  ...
+183                   Burundi                          0.399928  ...                                 18.00                                 82.9
+184                      Chad                          0.391906  ...                                 18.00                                147.5
+185                   Eritrea                          0.390899  ...                                  4.60                                 49.9
+186  Central African Republic                          0.350131  ...                                 50.00                                139.2
+187                     Niger                          0.348254  ...                                 16.00                                104.2
+
+[188 rows x 66 columns],      Country Name Country Code                Indicator Name  Indicator Code        1960  ...          2017          2018          2019  2020  Unnamed: 65
+0           Aruba          ABW  GDP per capita (current US$)  NY.GDP.PCAP.CD         NaN  ...  29007.693003           NaN           NaN   NaN          NaN
+1     Afghanistan          AFG  GDP per capita (current US$)  NY.GDP.PCAP.CD   59.773194  ...    556.302002    524.162881    502.115487   NaN          NaN
+2          Angola          AGO  GDP per capita (current US$)  NY.GDP.PCAP.CD         NaN  ...   4095.812942   3289.646664   2973.591160   NaN          NaN
+3         Albania          ALB  GDP per capita (current US$)  NY.GDP.PCAP.CD         NaN  ...   4531.020806   5284.380184   5352.857411   NaN          NaN
+4         Andorra          AND  GDP per capita (current US$)  NY.GDP.PCAP.CD         NaN  ...  38962.880354  41793.055258  40886.391165   NaN          NaN
+..            ...          ...                           ...             ...         ...  ...           ...           ...           ...   ...          ...
+259        Kosovo          XKX  GDP per capita (current US$)  NY.GDP.PCAP.CD         NaN  ...   4045.614209   4419.914327   4417.509940   NaN          NaN
+260         Yemen          YEM  GDP per capita (current US$)  NY.GDP.PCAP.CD         NaN  ...    882.395759    968.159048           NaN   NaN          NaN
+261  South Africa          ZAF  GDP per capita (current US$)  NY.GDP.PCAP.CD  443.009816  ...   6132.479841   6374.028196   6001.400814   NaN          NaN
+262        Zambia          ZMB  GDP per capita (current US$)  NY.GDP.PCAP.CD  232.188867  ...   1534.865371   1556.334482   1291.343357   NaN          NaN
+263      Zimbabwe          ZWE  GDP per capita (current US$)  NY.GDP.PCAP.CD  278.813699  ...   1548.170056   1683.740577   1463.985910   NaN          NaN
+
+[264 rows x 66 columns],      Country Name Country Code     Indicator Name Indicator Code        1960        1961  ...        2016        2017        2018        2019  2020  Unnamed: 65
+0           Aruba          ABW  Population, total    SP.POP.TOTL     54211.0     55438.0  ...    104872.0    105366.0    105845.0    106314.0   NaN          NaN
+1     Afghanistan          AFG  Population, total    SP.POP.TOTL   8996973.0   9169410.0  ...  35383128.0  36296400.0  37172386.0  38041754.0   NaN          NaN
+2          Angola          AGO  Population, total    SP.POP.TOTL   5454933.0   5531472.0  ...  28842484.0  29816748.0  30809762.0  31825295.0   NaN          NaN
+3         Albania          ALB  Population, total    SP.POP.TOTL   1608800.0   1659800.0  ...   2876101.0   2873457.0   2866376.0   2854191.0   NaN          NaN
+4         Andorra          AND  Population, total    SP.POP.TOTL     13411.0     14375.0  ...     77297.0     77001.0     77006.0     77142.0   NaN          NaN
+..            ...          ...                ...            ...         ...         ...  ...         ...         ...         ...         ...   ...          ...
+259        Kosovo          XKX  Population, total    SP.POP.TOTL    947000.0    966000.0  ...   1777557.0   1791003.0   1797085.0   1794248.0   NaN          NaN
+260         Yemen          YEM  Population, total    SP.POP.TOTL   5315355.0   5393036.0  ...  27168210.0  27834821.0  28498687.0  29161922.0   NaN          NaN
+261  South Africa          ZAF  Population, total    SP.POP.TOTL  17099840.0  17524533.0  ...  56203654.0  57000451.0  57779622.0  58558270.0   NaN          NaN
+262        Zambia          ZMB  Population, total    SP.POP.TOTL   3070776.0   3164329.0  ...  16363507.0  16853688.0  17351822.0  17861030.0   NaN          NaN
+263      Zimbabwe          ZWE  Population, total    SP.POP.TOTL   3776681.0   3905034.0  ...  14030390.0  14236745.0  14439018.0  14645468.0   NaN          NaN
+
+[264 rows x 66 columns]]
+[2020-12-24 23:05:41,908] {taskinstance.py:1065} INFO - Marking task as SUCCESS.dag_id=data-cleaning-and-integration, task_id=extract_data, execution_date=20201224T210525, start_date=20201224T210541, end_date=20201224T210541
+[2020-12-24 23:05:51,287] {logging_mixin.py:112} INFO - [2020-12-24 23:05:51,285] {local_task_job.py:103} INFO - Task exited with return code 0

@@ -1,0 +1,84 @@
+[2020-12-24 23:06:42,735] {taskinstance.py:669} INFO - Dependencies all met for <TaskInstance: data-cleaning-and-integration.transform_data 2020-12-24T21:05:25.907747+00:00 [queued]>
+[2020-12-24 23:06:42,743] {taskinstance.py:669} INFO - Dependencies all met for <TaskInstance: data-cleaning-and-integration.transform_data 2020-12-24T21:05:25.907747+00:00 [queued]>
+[2020-12-24 23:06:42,743] {taskinstance.py:879} INFO - 
+--------------------------------------------------------------------------------
+[2020-12-24 23:06:42,743] {taskinstance.py:880} INFO - Starting attempt 1 of 1
+[2020-12-24 23:06:42,743] {taskinstance.py:881} INFO - 
+--------------------------------------------------------------------------------
+[2020-12-24 23:06:42,749] {taskinstance.py:900} INFO - Executing <Task(PythonOperator): transform_data> on 2020-12-24T21:05:25.907747+00:00
+[2020-12-24 23:06:42,752] {standard_task_runner.py:53} INFO - Started process 7125 to run task
+[2020-12-24 23:06:42,816] {logging_mixin.py:112} INFO - Running %s on host %s <TaskInstance: data-cleaning-and-integration.transform_data 2020-12-24T21:05:25.907747+00:00 [running]> 1.0.0.127.in-addr.arpa
+[2020-12-24 23:06:43,128] {logging_mixin.py:112} WARNING - /Users/abdelrahman/Desktop/Semester_9/DE/Project/Project1/Project-Final/Project-repo/project-milestone-1-hakuna-matata/airflow/dags/Project1.py:129: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_life_expectancy['Population'][i] = df_population['Population'][j]
+[2020-12-24 23:07:58,957] {logging_mixin.py:112} WARNING - /Users/abdelrahman/Desktop/Semester_9/DE/Project/Project1/Project-Final/Project-repo/project-milestone-1-hakuna-matata/airflow/dags/Project1.py:137: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_life_expectancy['GDP'][i] = df_GDP['GDP'][j]
+[2020-12-24 23:09:17,172] {logging_mixin.py:112} WARNING - /Users/abdelrahman/Desktop/Semester_9/DE/Project/Project1/Project-Final/Project-repo/project-milestone-1-hakuna-matata/airflow/dags/Project1.py:151: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_explored['Gender Inequality'] = df_explored['Gender Inequality Index 2014']
+[2020-12-24 23:09:17,173] {logging_mixin.py:112} WARNING - /Users/abdelrahman/Desktop/Semester_9/DE/Project/Project1/Project-Final/Project-repo/project-milestone-1-hakuna-matata/airflow/dags/Project1.py:152: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_explored['Prison population'] = df_explored['Prison population per 100k people']
+[2020-12-24 23:09:17,173] {logging_mixin.py:112} WARNING - /Users/abdelrahman/Desktop/Semester_9/DE/Project/Project1/Project-Final/Project-repo/project-milestone-1-hakuna-matata/airflow/dags/Project1.py:153: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_explored['Homicide %'] = df_explored['Homicide rate per 100k people 2008-2012']
+[2020-12-24 23:09:17,174] {logging_mixin.py:112} WARNING - /Users/abdelrahman/Desktop/Semester_9/DE/Project/Project1/Project-Final/Project-repo/project-milestone-1-hakuna-matata/airflow/dags/Project1.py:154: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_explored['MaleSuicide %'] = df_explored['MaleSuicide Rate 100k people']
+[2020-12-24 23:09:17,174] {logging_mixin.py:112} WARNING - /Users/abdelrahman/Desktop/Semester_9/DE/Project/Project1/Project-Final/Project-repo/project-milestone-1-hakuna-matata/airflow/dags/Project1.py:155: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_explored['FemaleSuicide %'] = df_explored['Female Suicide Rate 100k people']
+[2020-12-24 23:09:17,175] {logging_mixin.py:112} WARNING - /Users/abdelrahman/Desktop/Semester_9/DE/Project/Project1/Project-Final/Project-repo/project-milestone-1-hakuna-matata/airflow/dags/Project1.py:156: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_explored['Forest area %'] = df_explored['Forest area percentage of total land area 2012']
+[2020-12-24 23:09:17,175] {logging_mixin.py:112} WARNING - /Users/abdelrahman/Desktop/Semester_9/DE/Project/Project1/Project-Final/Project-repo/project-milestone-1-hakuna-matata/airflow/dags/Project1.py:157: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_explored['Change forest %'] = df_explored['Change forest percentable 1900 to 2012']
+[2020-12-24 23:09:17,176] {logging_mixin.py:112} WARNING - /Users/abdelrahman/Desktop/Semester_9/DE/Project/Project1/Project-Final/Project-repo/project-milestone-1-hakuna-matata/airflow/dags/Project1.py:158: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_explored['name'] = df_explored['Id']
+[2020-12-24 23:09:17,189] {python_operator.py:114} INFO - Done. Returned value was:             name  Happiness Score   Freedom     Trust       GDP  ...  Prison population  Gender Inequality  Suicide %     Density  Adult Mortality per Population
+0    Afghanistan          3.51280  0.117924  0.058094  0.357113  ...               76.0           0.693350       11.5   42.088153                        0.009801
+1        Albania          4.71260  0.371898  0.043201  0.938633  ...              158.0           0.217396       11.8  103.266238                        0.015179
+2        Algeria          5.66760  0.178437  0.146099  1.012963  ...              162.0           0.413118        3.8   14.620135                        0.003107
+3         Angola          3.87225  0.027433  0.071570  0.798380  ...              105.0           0.407348       28.0   17.344080                        0.015195
+4      Argentina          6.45940  0.481620  0.064308  1.111035  ...              147.0           0.375610       21.3   14.355527                        0.002656
+..           ...              ...       ...       ...       ...  ...                ...                ...        ...         ...                             ...
+134      Uruguay          6.43120  0.574978  0.188516  1.135558  ...              281.0           0.312820       25.2   18.502846                        0.035806
+135   Uzbekistan          6.04620  0.655988  0.267424  0.723758  ...              152.0           0.514763       17.3   61.590334                        0.006707
+136        Yemen          3.62580  0.244175  0.067045  0.489313  ...               55.0           0.743960        7.3   41.158569                        0.009747
+137       Zambia          4.58440  0.462099  0.097337  0.571761  ...              119.0           0.586814       31.6   17.089111                        0.027548
+138     Zimbabwe          4.00660  0.323257  0.089997  0.344051  ...              129.0           0.503976       36.9   32.456053                        0.036458
+
+[139 rows x 28 columns]
+[2020-12-24 23:09:17,246] {taskinstance.py:1065} INFO - Marking task as SUCCESS.dag_id=data-cleaning-and-integration, task_id=transform_data, execution_date=20201224T210525, start_date=20201224T210642, end_date=20201224T210917
+[2020-12-24 23:09:17,962] {logging_mixin.py:112} INFO - [2020-12-24 23:09:17,961] {local_task_job.py:103} INFO - Task exited with return code 0
